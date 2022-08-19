@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Kate Hernandez</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap');
+
+      body {
+         font-family: 'Roboto Slab', serif;
+      }
+
+      i {
+         font-style: normal
+      }
+
+      .bg {
+         background: url('KateHernandez-bg.jpg') center bottom / cover;
+      }
+
+      .hero-body {
+         background: linear-gradient(to bottom right, #8c715ea5 0%, #31261fc5 100%);
+      }
+
+      .is-beige {
+         background: #ffeee24b;
+         border: 1px solid #d6cac2cb
+      }
+
+      .title,
+      h2,
+      h3 {
+         font-weight: 400 !important;
+      }
+
+      .buttons {
+         gap: 15px
+      }
+
+      .button {
+         color: white
+      }
+
+      .modal-card-body {
+         border-bottom-left-radius: 6px;
+         border-bottom-right-radius: 6px;
+      }
+
+      @media (max-width: 1024px) {
+         .bg {
+            background: url('KateHernandez-bg2.jpg') center bottom / cover;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <section class="hero bg is-fullheight">
+      <div class="hero-body is-align-items-flex-start">
+         <div class="container">
+            <div class="columns is-centered">
+               <div class="column is-6 has-text-centered">
+                  <div class="content">
+
+                     <h2 class="title has-text-white">Kate Hernandez</h2>
+
+                     <h3 class="has-text-white is-size-6-touch">
+                        Welcome to my world!<br>
+                        Meet me anywhere below
+                     </h3>
+
+                     <div class="buttons my-6">
+
+                        <a href="#"
+                           class="button is-rounded is-fullwidth is-medium is-beige is-outlined button_modal" target="_blank">
+                           <span class="icon">
+                              <i class="fa-solid fa-fire"></i>
+                           </span><span>Onlyfans</span></a>
+
+                        <a href="http://mistycollins.cammodels.com/"
+                           class="button is-rounded is-fullwidth is-medium is-beige"
+                           target="_blank">
+                           <span class="icon">
+                              <i class="fa-solid fa-globe"></i>
+                           </span><span>My Site</span></a>
+
+                        <a href="https://instagram.com/mistycollinssss"
+                           class="button is-rounded is-fullwidth is-medium is-beige"
+                           target="_blank">
+                           <span class="icon">
+                              <i class="fab fa-instagram"></i>
+                           </span><span>Instagram</span></a>
+
+                        <a href="https://twitter.com/mistycollinssss/"
+                           class="button is-rounded is-fullwidth is-medium is-beige"
+                           target="_blank">
+                           <span class="icon">
+                              <i class="fab fa-twitter"></i>
+                           </span><span>Twitter</span></a>
+
+                        <a href="https://tiktok.com/mistycollinsss"
+                           class="button is-rounded is-fullwidth is-medium is-beige"
+                           target="_blank"><span
+                              class="icon">
+                              <i class="fab fa-tiktok"></i>
+                           </span><span>Tik Tok</span></a>
+                     </div>
+
+
+                  </div>
+
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+
+   <!-- Modal suscribe -->
+
+   <div id="sensible" class="modal">
+      <div class="modal-background cerrar-modal"></div>
+      <div class="modal-card has-text-centered">
+         <header class="modal-card-head">
+            <h2 class="modal-card-title">Sensitive Content</h2>
+            <button class="modal-close is-large cerrar_news" aria-label="close"></button>
+         </header>
+
+         <section class="modal-card-body">
+            <p class="my-3">This link may contain content that is not appropriate for all audiences.
+            </p>
+            <a href="https://onlyfans.com/mistycollinssss" target="_blank"
+               class="button is-black is-outlined">Continue</a>
+         </section>
+
+      </div>
+      <button class="modal-close is-large cerrar-modal">Close</button>
+   </div>
+
+
+
+
+
+   <script>
+      const sensible = document.querySelector("#sensible");
+
+      addEventListener("load", cargaBotones);
+
+      function cargaBotones() {
+         let manuales = document.querySelectorAll(".button_modal");
+         manuales.forEach(function (boton) {
+            boton.addEventListener("click", function () {
+               sensible.classList.add("is-active");
+               sensible.classList.add("is-clipped");
+            });
+         });
+
+         let cierres = document.querySelectorAll(".cerrar-modal");
+         cierres.forEach((boton) => {
+            boton.addEventListener("click", function () {
+               sensible.classList.remove("is-active");
+               sensible.classList.remove("is-clipped");
+            });
+         });
+      }
+
+
+   </script>
+</body>
+
+</html>
